@@ -1,0 +1,21 @@
+name: Run Shell Script
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest  # You can choose the operating system you prefer
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run shell script
+      run: ./birectional.sh  # Specify the path to your shell script
+
+    - name: Display execution status
+      if: ${{ success() }}
+      run: echo "Script executed successfully"
