@@ -40,7 +40,7 @@ git clone --mirror "https://x-token-auth:$BITBUCKET_PAT@$BITBUCKET_CLONE_URL"
 # Clone Azure DevOps Repository
 mkdir -p "$azureDevOpsDir"
 cd "$azureDevOpsDir"
-git clone --mirror "https://creddy:$AZURE_DEVOPS_PAT@$AZURE_DEVOPS_CLONE_URL"
+git clone --mirror "https://username:$AZURE_DEVOPS_PAT@$AZURE_DEVOPS_CLONE_URL"
 
 # Navigate to Bitbucket Repository
 cd "$bitbucketDir/$BITBUCKET_REPO_NAME.git"
